@@ -1,0 +1,10 @@
+format_version: "11"
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  check:
+    steps:
+    - cache-pull@1.0.0: {}
+    # - git::https://github.com/bitrise-steplib/steps-check.git:
+    #     inputs:
+    #     - skip_step_yml_validation: "no"

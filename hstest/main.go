@@ -25,7 +25,7 @@ func main() {
 	// var wg sync.WaitGroup
 
 	runFn := func(id int) error {
-		runCmd := command.NewWithStandardOuts("hangman", "bitrise", "--debug", "run", "--secret-filtering=false", "check")
+		runCmd := command.NewWithStandardOuts("hangman", "bitrise", "--debug", "run", "check")
 		// tmpFile, err := os.CreateTemp(os.TempDir(), "")
 		// if err != nil {
 		// 	log.Errorf("%s", err)

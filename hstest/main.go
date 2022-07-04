@@ -1,6 +1,7 @@
 package main
 
 import (
+	"errors"
 	"os"
 	"os/exec"
 
@@ -60,7 +61,13 @@ func main() {
 		// go runFn(i)
 
 		if err := runFn(i); err != nil {
-			hanged += 1
+			var exitError *exec.ExitError
+			if errors.As(err, &exitError) {
+				exitCode := exitError.ProcessState.ExitCode()
+				if exitCode > 10 {
+					hanged++
+				}
+			}
 		}
 	}
 	// wg.Wait()

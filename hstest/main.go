@@ -40,7 +40,7 @@ func main() {
 		// envmanArgs := []string{"envman", "--loglevel", "debug", "--path", tmpFile.Name(), "init", "--clear"}
 		// err = RunCommandInDir("", "hangman", envmanArgs...)
 
-		runCmd.AppendEnvs("BITRISE_ANALYTICS_DISABLED=true")
+		runCmd.AppendEnvs("BITRISE_ANALYTICS_DISABLED=false")
 		err := runCmd.Run()
 		// outs[id] = out
 		if err != nil {

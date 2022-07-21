@@ -21,7 +21,7 @@ func RunCommandInDir(dir, name string, args ...string) error {
 }
 
 func main() {
-	numTests := 100
+	numTests := 1000
 	// outs := make([]string, numTests)
 	// var wg sync.WaitGroup
 

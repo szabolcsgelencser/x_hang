@@ -1,0 +1,9 @@
+workflows:
+  print_ip:
+    name: Print Public IP
+    scripts:
+      - name: Fetch and print public IP
+        script: |
+          echo "Fetching public IP address..."
+          curl http://checkip.amazonaws.com
+          echo "Done."

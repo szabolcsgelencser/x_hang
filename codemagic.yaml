@@ -1,6 +1,8 @@
 workflows:
   print_ip:
     name: Print Public IP
+    machine:
+      type: macos-m2
     scripts:
       - name: Fetch and print public IP
         script: |

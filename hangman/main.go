@@ -14,7 +14,7 @@ func main() {
 	logger := log.NewLogger()
 
 	if len(os.Args) < 2 {
-		logger.TErrorf("[hm] No command provided to run")
+		logger.TErrorf("[hm] No command provided to run...")
 		os.Exit(1)
 	}
 
